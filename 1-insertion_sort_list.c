@@ -8,10 +8,11 @@
 
 void insertion_sort_list(listint_t **list)
 {
+	listint_t *key;
+	listint_t *current;
+
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	listint_t *key, *current;
-
 	for (current = (*list)->next; current != NULL; current = current->next)
 	{
 		key = current;
@@ -25,7 +26,7 @@ void insertion_sort_list(listint_t **list)
 			key->next->prev = key;
 			if (key->prev == NULL)
 				*list = key;
-			print_list(list);
+			print_list((const listint_t *)*list);
 		}
 	}
 }
