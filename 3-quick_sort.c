@@ -1,5 +1,4 @@
 #include "sort.h"
-#include "sort.h"
 /**
  * swapping_slot - used to swap values between two
  * different slots
@@ -63,7 +62,7 @@ void lumoto1(int *array, size_t size, int first, int last)
 	if (last - first > 0)
 	{
 		temp = lumoto2(array, size, first, last);
-		lumoto1(array, size, first, last - 1);
+		lumoto1(array, size, first, temp - 1);
 		lumoto1(array, size, temp + 1, last);
 	}
 }
