@@ -24,5 +24,8 @@ void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
+void swapping_slot(int *first_slot, int *second_slot);
+int lumoto2(int *array, size_t size, int first, int last);
+void lumoto1(int *array, size_t size, int first, int last);
 
 #endif
