@@ -17,7 +17,7 @@ void merge(int *array, size_t left, size_t right)
 	int *left_array, *right_array;
 
 	if (left >= right)
-                return;
+		return;
 	middle = (left + right) / 2;
 	left_size = middle - left + 1;
 	right_size = right - middle;
@@ -66,7 +66,7 @@ void merge(int *array, size_t left, size_t right)
 
 void merge_sort(int *array, size_t size)
 {
-	if (array == NULL || size == 0)
+	if (array == NULL || size < 2)
 		return;
 	merge(array, 0, size - 1);
 }
